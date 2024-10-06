@@ -22,6 +22,10 @@
 }
 
 // navigation__section part started
+.navigation__section {
+    padding-bottom: 70px;
+}
+
 .navigation__list {
     display: flex;
     justify-content: space-between;
@@ -80,8 +84,22 @@
 }
 // navigation__section part finished
 
-@media only screen and (min-width: 320) {
-    .header__list {
+@media only screen and (min-width: 320px) {
+    .navigation__section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .navigation__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .navigation__list {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -89,8 +107,8 @@
         @include m();
     }
 
-    .header__title {
-        width: 390px;
+    .navigation__title {
+        width: 300px;
         color: #000;
 
         /* h1 mob */
@@ -100,4 +118,93 @@
         font-weight: 500;
         line-height: normal;
     }
+    .navigation__info {
+        width: 300px;
+        color: #000;
+
+        /* p mob */
+        font-family: "Space Grotesk";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px; /* 150% */
+    }
+
+    .navigation__image {
+        width: 300px;
+        height: 309px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .navigation__section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .navigation__wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .navigation__list {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .navigation__title {
+        width: 531px;
+        color: #000;
+        margin: 0;
+        margin-bottom: 35px;
+        /* h1 */
+        font-family: "Space Grotesk";
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+
+    .navigation__info {
+        width: 498px;
+        display: inline-block;
+        color: #000;
+        margin-top: 0;
+        margin-bottom: 35px;
+        font-family: "Space Grotesk";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 28px; /* 140% */
+    }
+}
+
+// links__section part started
+
+.links__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.links__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    @include m();
+}
+// links__section part finished
+
+@media only screen and (min-width:320px) {
+    
 }
