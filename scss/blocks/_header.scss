@@ -1,0 +1,129 @@
+/* space-grotesk-300 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Space Grotesk";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../fonts/space-grotesk-v16-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* space-grotesk-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Space Grotesk";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/space-grotesk-v16-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* space-grotesk-500 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Space Grotesk";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/space-grotesk-v16-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* space-grotesk-600 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Space Grotesk";
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/space-grotesk-v16-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* space-grotesk-700 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: "Space Grotesk";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/space-grotesk-v16-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+@mixin m {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+// site-header part started
+.header {
+    width: 1413px;
+    padding-top: 60px;
+}
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.header__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    @include m();
+    gap: 40px;
+}
+
+.header__item {
+    font-family: "Space Grotesk";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 140% */
+}
+
+.header__link {
+    text-decoration: none;
+    color: #000;
+}
+
+.header__link-box {
+    width: 231px;
+    display: flex;
+    padding: 20px 35px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 14px;
+    border: 1px solid var(--Dark, #191a23);
+}
+
+.header__link {
+    width: 161px;
+    color: #000;
+    text-align: center;
+    font-family: "Space Grotesk";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 140% */
+    text-align: center;
+}
+
+// site-header part finsihed
+
+// site-header responsive started
+@media only screen and (min-width: 320px) {
+    .header__nav {
+        display: none;
+    }
+
+    .header__link-box {
+        display: none;
+    }
+}
+@media only screen and (min-width: 1000px) {
+    .header__nav {
+        display: block;
+    }
+
+    .header__link-box {
+        display: block;
+    }
+
+    .menu{
+        display: none;
+    }
+}
+// site-header responsive finished
